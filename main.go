@@ -19,7 +19,10 @@ var (
 
 func main() {
 	flag.Parse()
+	sendRequests()
+}
 
+func sendRequests() {
 	if *concurrency > *num {
 		fmt.Println("error: c cannot be greater than n")
 		os.Exit(1)
